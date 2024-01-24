@@ -1,0 +1,373 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 1em;
+    width: 100%;
+    position: fixed;
+    z-index: 103;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 75px;
+    padding-left: 15px;
+}
+
+.align-right {
+   text-align: right;
+}
+
+.search-bar {
+    padding: 0px 0px 0px 20px;
+}
+
+input {
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+
+#search-icon {
+    background-color: #F27233;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'FontAwesome';
+}
+
+
+.sidenav-wrapper {
+    width: 250px;
+    position: fixed;
+    height: 100vh;
+    z-index: 102;
+    transition: width .4s ease;
+    background: transparent;
+    text-align: center;
+    padding-right: 15px;
+    z-index: 102;
+}
+
+.sidenav-container {
+    min-height: 100vh;
+    background: #425563;
+    position: relative;
+    padding-bottom: 150px;
+    z-index: 101;
+}
+
+.side-nav {
+    height: 100%
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5em;
+    font-size: 17px;
+}
+
+.nav-links {
+    padding-left: 5px;
+    padding-top: 110px;
+}
+
+span.fa.fa-home {
+    padding-right: 3px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    z-index: 1;
+}
+
+.banner {
+    margin-left: 250px;
+    text-align: center;
+    padding: 0px 0px 30px 0px;
+}
+
+.banner img {
+    height: auto;
+    width: 93%;
+}
+
+
+.text-info {
+    background-color: #f5f5f5;
+    padding: 1em;
+}
+
+.main-boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    margin-left: 235px;
+}
+
+.upsell-box {
+    background-color: #f5f5f5;
+    padding: 1em;
+    display: flex;
+    z-index: 0;
+}
+
+.product-logo {
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.pdf-section {
+    background-color: #f5f5f5;
+    padding: 1em;
+}
+
+.learn-box {
+    background-color: #f5f5f5;
+    padding: 1em;
+}
+
+.info-text {
+    padding: 30px 0px 30px 0px;
+    margin-left: 250px;
+    /*accounting for the side nav so this text will be centered*/
+    text-align: center;
+    font-size: 26px;
+    font-family: 'oswald';
+    color: #425563;
+    margin-top: 90px;
+}
+
+.caret{
+    display:inline-block;
+    width:0;
+    height:0;
+    margin-left:2px;
+    vertical-align:middle;
+    border-top:4px dashed;
+    border-top:4px solid\9;
+    border-right:4px solid transparent;
+    border-left:4px solid transparent
+    }
+
+    .dropdown-toggle::after{
+        display:inline-block;
+        width:0;
+        height:0;
+        margin-left:8px;
+        vertical-align:middle;
+        border-top:4px dashed;
+        border-top:4px solid\9;
+        border-right:4px solid transparent;
+        border-left:4px solid transparent
+    }
+
+
+.upsell {
+    border: 4px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    position: relative;
+    height: 250px;
+    width: 530px;
+}
+
+.upsell:hover {
+    border: solid 4px #F27233;
+    cursor: pointer;
+}
+
+
+.upsell::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 48px;
+    border-right-color: #425563;
+    border-top-color: #425563;
+}
+
+.upsell::after {
+    content: '\f05a';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    color: white;
+    font-size: 31px;
+}
+
+
+#consider-text {
+    align-self: flex-start;
+    /*start at the top*/
+    font-size: 14px;
+}
+
+#upsell-logo {
+    width: 300px;
+    align-self: center;
+    padding-bottom: 15px;
+}
+
+#marketing-text {
+    align-self: flex-end;
+    /*go to bottom*/
+    text-align: right;
+    font-size: 14px;
+}
+
+
+/* .dropdown-menu {
+    background-color: #59737c;
+    border: 4px white solid; 
+    box-shadow: none; 
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    z-index: 1000;
+    width: 130px;
+} */
+
+ul.dropdown-menu.nav-dropdowns.show {
+    background-color: #566f85;
+    padding: 0.5em;
+    position: static!important;
+    transform: none!important;
+}
+
+.dropdown-menu .nav-dropdowns {
+    background-color: #59737c;
+    z-index: 1000;
+}
+
+.dropdown-menu>li>a{
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu>li{
+    padding: 8px;
+}
+
+.dropdown-menu>li:hover{
+    background-color: #85a5c0;;
+    color: #fff;
+}
+
+#my-account-dropdown>li:hover{
+    background-color: #f39e73;
+    color: #fff;
+}
+
+.btn-primary:hover,.btn-primary:focus {
+    color: #fff;
+    background-color: #566f85;
+}
+
+#my-account-dropdown>li>a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+#my-account-dropdown>li {
+   padding: 0px 0px 10px 0px;
+   width: 140px;
+}
+
+#my-account-dropdown{
+    background-color: #F27233;
+    border: 4px #F27233 solid;
+    box-shadow: none;
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    z-index: 1000;
+    width: 130px;
+}
+
+#leftSection{
+    margin-left: 400px;
+    color: black;
+}
+
+#my-account{
+    background-color: #F27233;
+    border-radius: 4px;
+}
+
+#aa-safe-btn{
+    background: none;
+    color: white; 
+    font-size: 15px;
+}
+
+.course-item {
+    background-color: #f5f5f5;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 4px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+  
+  .course-item:hover{
+    border: 4px #F27233 solid;
+  }
+  
+  .course-item h2 {
+    font-size: 20px;
+    color: #425563;
+    font-family: 'oswald';
+  }
+  
+  .course-item p {
+    font-size: 16px;
+    color: black;
+    font-family: sans-serif;
+  }
